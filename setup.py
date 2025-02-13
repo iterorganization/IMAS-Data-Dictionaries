@@ -21,12 +21,10 @@ def build_zip_file():
         # Use best available compression to reduce filesize of distributions
         compresslevel=9,
     ) as zipfile:
-        for file in curdir.glob("*/*.xml"):
-            folder, name = file.parts[-2:]
-            if folder not in ("data-dictionary", "identifiers"):
-                continue
-
-            zipfile.write(file, arcname=Path(folder) / name)
+        for file in curdir.glob("data-dictionary/*.xml"):
+            zipfile.write(file, arcname=Path(*file.parts[-2:]))
+        for file in curdir.glob("identifiers/*/*.xml"):
+            zipfile.write(file, arcname=Path(*file.parts[-3:]))
 
 
 class BuildZipFileBeforeSdist(sdist):
