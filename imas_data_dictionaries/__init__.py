@@ -22,7 +22,7 @@ except ImportError:  # Python 3.8 support
 from packaging.version import InvalidVersion, Version
 
 logger = logging.getLogger(__name__)
-ZIPFILE_LOCATION = files() / "imas_data_dictionaries.zip"
+ZIPFILE_LOCATION = files("imas_data_dictionaries") / "imas_data_dictionaries.zip"
 
 
 class UnknownDDVersion(ValueError):
