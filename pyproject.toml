@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "imas-data-dictionaries"
+description = "The Data Dictionary is the implementation of the Data Model of ITER's Integrated Modelling & Analysis Suite (IMAS)"
+authors = [{name = "ITER Organization", email = "imas-support@iter.org"}]
+license = { text = "LGPL-3.0-or-later AND CC-BY-ND-4.0" }
+readme = "README.md"
+keywords = ["IMAS", "Data Dictionary", "IDS"]
+classifiers = [
+    "License :: OSI Approved :: GNU Lesser General Public License v3 (LGPL-3.0)",
+    "License :: Other/Proprietary License",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dynamic = ["version"]
+dependencies = [
+    "importlib_resources;python_version<'3.9'",
+    "packaging",
+    "setuptools_scm>=8",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["imas_data_dictionaries"]
+
+[tool.setuptools.package-data]
+imas_data_dictionaries = ["imas_data_dictionaries.zip"]
