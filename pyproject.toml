@@ -30,3 +30,5 @@ include = ["imas_data_dictionaries"]
 
 [tool.setuptools.package-data]
 imas_data_dictionaries = ["imas_data_dictionaries.zip"]
+
+[tool.setuptools_scm]
