@@ -2,7 +2,10 @@
 
 This repository contains an archive of released versions of the [IMAS Data
 Dictionary](https://github.com/iterorganization/IMAS-Data-Dictionary) and
-corresponding identifiers.
+corresponding identifiers. The oldest version included is `3.22.0`. The version
+of this repository corresponds to the latest included Data Dictionary release.
+For example, version `4.0.0` of this repository will include all Data Dictionary
+versions from `3.22.0` to `4.0.0`.
 
 The goals of this repository are:
 1. Allow easy access to released IMAS Data Dictionary definitions, such that
