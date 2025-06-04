@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imas-data-dictionaries"
-description = "The Data Dictionary is the implementation of the Data Model of ITER's Integrated Modelling & Analysis Suite (IMAS)"
+description = "This package all released versions (IDSDef.xml + identifiers) of the Data Dictionary of ITER's Integrated Modelling & Analysis Suite (IMAS)"
 authors = [{name = "ITER Organization", email = "imas-support@iter.org"}]
 license = "LGPL-3.0+ AND CC-BY-ND-4.0"
 license-files = ["LICENSE-LGPL", "LICENSE-CC-BY-ND"]
@@ -23,6 +23,9 @@ dependencies = [
     "setuptools_scm>=8",
 ]
 
+[project.urls]
+homepage = "https://github.com/iterorganization/IMAS-Data-Dictionaries"
+
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["imas_data_dictionaries"]
@@ -31,3 +34,4 @@ include = ["imas_data_dictionaries"]
 imas_data_dictionaries = ["imas_data_dictionaries.zip"]
 
 [tool.setuptools_scm]
+local_scheme = "no-local-version"
