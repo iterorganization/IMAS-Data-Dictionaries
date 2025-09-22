@@ -20,7 +20,6 @@ dynamic = ["version"]
 dependencies = [
     "importlib_resources;python_version<'3.9'",
     "packaging",
-    "setuptools_scm>=8",
 ]
 
 [project.urls]
